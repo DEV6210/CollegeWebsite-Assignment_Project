@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/css/bootstrap.css">
+    <title>courses</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: space-between; 
+            
+             
+        }
+        .sub-container1{
+            width: 50%;
+            height: 200px;            
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);           
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display: flex;
+        }
+        .sub-container2{
+            width: 50%;
+            height: 200px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: flex;
+        }
+        
+        .img-course{
+            width: 100%;
+            height: auto;
+        }
+
+        /*--- nav ---*/
+        *{
+            margin: 0px;
+        }
+        .nav{           
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(214, 214, 214);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+           padding-top: 6px;
+           margin-bottom: 30px
+
+            
+            
+                     
+        }
+        .nav{
+            position:-webkit-sticky;
+            top: 0;
+            position: sticky;
+        }
+        ul{
+            margin-right: 20px;
+            margin-left: -20px;
+        }
+        li{
+            list-style: none;
+        }    
+        .collage-logo{
+            font-weight: bold;
+            font-size: 35px;
+            color: white;
+        }
+        #three-dot{
+            color: rgb(8, 0, 255);
+            font-size: 30px;
+            text-decoration: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        
+       
+        
+       
+
+        /*screen size maintain*/
+
+        /*for desktop/pc/laptop/tablet screen................*/
+        @media screen and (min-width:501px) {
+           .img{
+                height: 60px;  
+           }
+            ul{
+            margin-bottom: 10px;
+           }
+           .img-course{
+                width:30%;
+                height:auto;
+           }
+           .course-card{
+                margin-top: 15px;
+           }
+           .course-card:hover{
+            color: rgb(255, 0, 0);
+            cursor: pointer;
+           }
+          
+           a:hover{
+            box-shadow: 0 4px 8px 0 rgb(216, 216, 216),0 6px 20px 0 white;
+             
+           
+           }
+         
+
+
+          
+            
+        }
+        /*for mobile screen................*/
+        @media screen and (max-width:500px) {
+            .img{
+                width: 80%;
+                margin-left: -10px;
+            }            
+        
+           ul{
+            margin-bottom: 10px;
+           }
+           .course-card{
+            display: none;
+           }
+           .hm{
+            display: none;
+           }
+           .hm1{
+            margin-top: 10px;
+            width: 28px;
+            height: 28px;
+           }
+
+        }
+    </style>
+</head>
+<body>
+
+    <!--Top Navigation bar-->
+    <div class="nav">
+        <ul class="subnav">
+            <li>
+                <a href="javascript:void(0);" class="collage-logo">
+                    <img class="img" src="image/gitaram-logo.png" alt="Not Available">
+
+                </a>
+            </li>
+        </ul>
+        <ul class="subnav">
+            <li><a href="/index.html" id="three-dot">
+                <svg class="hm1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                </svg> <b class="hm">Home</b>
+            </a></li>
+        </ul>
+    </div>
+
+
+
+
+
+
+    <br>
+
+
+<div style="margin-bottom: 20px;">
+    <div class="container">
+        <a href="bca.html" class="sub-container1">
+            <img class="img-course" src="image/BCA.jpg" alt="">
+
+            <label class="course-card" for=""><b>BCA</b><br> Any student who has passed 10+2 (General/Vocational) examination with English/Functional English(in CBSE) and Mathematics/Statistics/Computer application/Modern computer application/ are eligible for admission.</label>
+        
+            
+        </a>
+        <a href="bba.html" class="sub-container2">
+            <img class="img-course" src="image/BBA.jpg" alt="">
+            <label class="course-card" for=""><b>BBA</b><br> student who has passed 10+2 (General/Vocational) examination with English/Functional English is eligible for admission.</label>
+           
+        </a>        
+    </div>
+
+    <div class="container">
+        <a href="bhm.html" class="sub-container1">
+            <img class="img-course" src="image/BHM.jpg" alt="">
+            <label class="course-card" for=""><b>BHM</b><br> Any student who has passed 10+2 (General/ Vocational) examination with English/ Functional English is Eligible for admission.</label>
+
+           
+        </a>
+        <a href="pgdm.html" class="sub-container2">
+            <img class="img-course" src="image/PGDM.jpg" alt="">
+            <label class="course-card" for=""><b>PGDM</b><br>
+               
+                    1. Graduate in any discipline having 50% marks will get direct admission<br>
+                    2. Graduate in any discipline having less than 50% marks will need MAT score card
+           
+
+               </label>
+           
+        </a>        
+    </div>
+
+</div>
+<br>
+    
+
+    <a href="placement.html" class="course-button">
+
+        <button type="button" class="btn btn-primary btn-lg btn-block">
+            <marquee behavior="alternate" direction="">Placement Records</marquee>
+        </button>
+   </a>
+   
+    
+   <br><br>
+    
+</body>
+</html>

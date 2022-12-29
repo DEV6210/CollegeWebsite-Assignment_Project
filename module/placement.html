@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>placementt</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    
+	
+	
+    <style>
+        body{
+            background-color: #ffffff;
+        }
+        .style1{    
+            border-radius: 10px;
+            background-color: white;
+            width: 100%;
+            height: 180px;
+            text-align: center;
+                  
+        }
+        a{
+            text-decoration: none;
+           
+        }
+        .image{           
+            width: 100%;
+            height: auto;         
+          
+        }
+    </style>
+    <style>
+        .container{
+            display: flex;
+            justify-content: space-between; 
+            
+             
+        }
+        .sub-container1{
+            width: 50%;
+            height: 200px;            
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);           
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display: flex;
+        }
+        .sub-container2{
+            width: 50%;
+            height: 200px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: flex;
+        }
+        
+        .img-course{
+            width: 100%;
+            height: auto;
+        }
+
+        /*--- nav ---*/
+        *{
+            margin: 0px;
+        }
+        .nav{           
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(214, 214, 214);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+           padding-top: 6px;
+           margin-bottom: 15px;
+
+
+            
+            
+                     
+        }
+        .nav{
+            position:-webkit-sticky;
+            top: 0;
+            position: sticky;
+        }
+        ul{
+            margin-right: 20px;
+            margin-left: -20px;
+        }
+        li{
+            list-style: none;
+        }    
+        .collage-logo{
+            font-weight: bold;
+            font-size: 35px;
+            color: white;
+        }
+        #three-dot{
+            color: rgb(8, 0, 255);
+            font-size: 30px;
+            text-decoration: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .title-back{
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px 0 rgb(216, 216, 216),0 6px 20px 0 white;
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+       
+        
+       
+
+        /*screen size maintain*/
+
+        /*for desktop/pc/laptop/tablet screen................*/
+        @media screen and (min-width:501px) {
+           .img{
+                height: 60px;  
+           }
+            ul{
+            margin-bottom: 10px;
+           }
+           .img-course{
+                width:30%;
+                height:auto;
+           }
+           .course-card{
+                margin-top: 15px;
+           }
+           .course-card:hover{
+            color: rgb(255, 0, 0);
+            cursor: pointer;
+           }
+          
+           a:hover{
+            box-shadow: 0 4px 8px 0 rgb(216, 216, 216),0 6px 20px 0 white;
+             
+           
+           }
+           .main-b{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-left: 100px;
+                margin-right: 50px;
+                margin-top: 50px;
+                
+            } 
+            body{
+                margin-bottom: 100px
+            }  
+            .t1{               
+                padding-right:10px;
+                margin: 10px;                
+            }               
+            .title-back{
+                background-color: #ffffff;
+                box-shadow: 0 4px 8px 0 rgb(216, 216, 216),0 6px 20px 0 white;
+                border-radius: 20px;
+                margin-top: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }     
+            table{
+            margin-top: 10px;          
+        }     
+            
+        }
+        /*for mobile screen................*/
+        @media screen and (max-width:500px) {
+            .img{
+                width: 80%;
+                margin-left: -10px;
+            }            
+        
+           ul{
+            margin-bottom: 10px;
+           }
+           .course-card{
+            display: none;
+           }
+           
+           .hm1{
+            margin-top: 10px;
+            width: 28px;
+            height: 28px;
+           }
+           .hm{
+            
+            font-weight: bold;
+           }
+           .main-b{
+            margin-left:10px;
+           margin-right: 10px;
+           }
+           .t1{
+                padding: 10px;
+            }
+            .image{           
+            width: 100%;
+            height: auto;
+            margin-top: 70px;            
+          
+        }
+        table{
+            margin-top: 10px;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <!--Top Navigation bar-->
+    <div class="nav">
+        <ul class="subnav">
+            <li>
+                <a href="javascript:void(0);" class="collage-logo">
+                    <img class="img" src="image/gitaram-logo.png" alt="Not Available">
+
+                </a>
+            </li>
+        </ul>
+        <ul class="subnav">
+            <li><a href="/module/courses.html" id="three-dot">
+                <!-- <svg class="hm1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                </svg> --><b class="hm">Back</b>
+            </a></li>
+        </ul>
+    </div>
+
+    <!--Table 2022-->
+
+    <div class="title-back">        
+        <div class="t1"> 
+            <span style="color: rgb(0, 0, 0);background-color: #04ffc9;border-radius: 5px;font-weight: bold; padding: 5px;">
+                 2022 job opportunity 
+            </span>
+            <table class="table" border="1" width="">
+                <tr>
+                    <th width="50%">Company Name</th>
+                    <th>Student Name</th>                
+                </tr>
+                <tr>
+                    <td rowspan="5">
+                        <img class="image" src="/module/image/wipro.png" alt="">
+                    </td>
+                    <td >Arpita Das</td>
+                </tr>
+                
+                <tr>
+                    <td>Robin Kumar</td>
+                    
+                </tr>
+                <tr>
+                    <td>Mampi Halder</td>
+                    
+                </tr>
+                <tr>
+                    <td>Keya Singh</td>
+                    
+                </tr>
+                <tr>
+                    <td>Neha Das</td>
+                   
+                </tr>        
+            </table>      
+        </div>
+
+        <div class="t1"> 
+            <table class="table" border="1" width="">
+                <tr>
+                    <th width="50%">Company Name</th>
+                    <th>Student Name</th>                
+                </tr>
+                <tr>
+                    <td rowspan="5">
+                        <img style="margin-top:20px" class="image" src="/module/image/infosys.png" alt="">
+                    </td>
+                    <td >Rina Mandal</td>
+                </tr>
+                
+                <tr>
+                    <td>Amit Kumar</td>
+                    
+                </tr>
+                <tr>
+                    <td>Sagar Nuia</td>
+                    
+                </tr>
+                <tr>
+                    <td>Koyel Kumari</td>
+                    
+                </tr>
+                
+                       
+            </table>      
+        </div>
+        <div class="t1"> 
+            <table class="table" border="1" width="">
+                <tr>
+                    <th width="50%">Company Name</th>
+                    <th>Student Name</th>                
+                </tr>
+                <tr>
+                    <td rowspan="5">
+                        <img class="image" src="/module/image/14.png" alt="">
+                    </td>
+                    <td >keya Mandal</td>
+                </tr>
+                
+                <tr>
+                    <td>Sudip Dey</td>
+                    
+                </tr>
+                <tr>
+                    <td>Mampi Mondal</td>
+                    
+                </tr>
+                <tr>
+                    <td>Ajit Singh</td>
+                    
+                </tr>
+                <tr>
+                    <td>Megha Bhaat</td>
+                   
+                </tr>        
+            </table>      
+        </div>
+    </div>
+
+
+    <!--Table 2021-->
+
+    <div class="title-back">
+    
+        <div class="t1"> 
+            <span style="color: rgb(0, 0, 0);background-color: #04ffc9;border-radius: 5px;font-weight: bold; padding: 5px;">
+                2021 job opportunity 
+           </span>
+            <table class="table" border="1" width="">
+                <tr>
+                    <th width="50%">Company Name</th>
+                    <th>Student Name</th>                
+                </tr>
+                <tr>
+                    <td rowspan="5">
+                        <img class="image" src="/module/image/13.png" alt="">
+                    </td>
+                    <td >Rana Das</td>
+                </tr>
+                
+                <tr>
+                    <td>Adhir Dey</td>
+                    
+                </tr>
+                <tr>
+                    <td>Thun Khatun</td>
+                    
+                </tr>
+                <tr>
+                    <td>Priya Paul</td>
+                    
+                </tr>
+                <tr>
+                    <td>Joy Das</td>
+                   
+                </tr>        
+            </table>      
+        </div>
+
+        <div class="t1"> 
+            <table class="table" border="1" width="">
+                <tr>
+                    <th width="50%">Company Name</th>
+                    <th>Student Name</th>                
+                </tr>
+                <tr>
+                    <td rowspan="4">
+                        <img style="margin-top:20px" class="image" src="/module/image/infosys.png" alt="">
+                    </td>
+                    <td >Suparna Saha</td>
+                </tr>
+                
+                <tr>
+                    <td>Amit Mandal</td>
+                    
+                </tr>
+                <tr>
+                    <td>Mistu Konai</td>
+                    
+                </tr>
+                <tr>
+                    <td>Arit Dey</td>
+                    
+                </tr>
+                       
+            </table>      
+        </div>
+        <div class="t1"> 
+            <table class="table" border="1" width="">
+                <tr>
+                    <th width="50%">Company Name</th>
+                    <th>Student Name</th>                
+                </tr>
+                <tr>
+                    <td rowspan="5">
+                        <img class="image" src="/module/image/8.png" alt="">
+                    </td>
+                    <td >Sangita Biswas</td>
+                </tr>
+                
+                <tr>
+                    <td>Mampi Das</td>
+                    
+                </tr>
+                <tr>
+                    <td>Kumari Soniya</td>
+                    
+                </tr>
+                <tr>
+                    <td>Ajit Mondal</td>
+                    
+                </tr>
+                <tr>
+                    <td>Biplob Das</td>
+                   
+                </tr>        
+            </table>      
+        </div>
+    </div>
+
+
+    <!--Table 2020-->
+
+    <div class="title-back">
+        <div class="t1"> 
+            <span style="color: rgb(0, 0, 0);background-color: #04ffc9;border-radius: 5px;font-weight: bold; padding: 5px;">
+                2020 job opportunity 
+           </span>
+            <table class="table" border="1" width="">
+                <tr>
+                    <th width="50%">Company Name</th>
+                    <th>Student Name</th>                
+                </tr>
+                <tr>
+                    <td rowspan="5">
+                        <img class="image" src="/module/image/2.png" alt="">
+                    </td>
+                    <td >Amit Mandal</td>
+                </tr>
+                
+                <tr>
+                    <td>Papiya Mandal</td>
+                    
+                </tr>
+                <tr>
+                    <td>RadhaMadhob M..</td>
+                    
+                </tr>
+                <tr>
+                    <td>Purnendu Mandal</td>
+                    
+                </tr>
+                <tr>
+                    <td>Ritesh Saha</td>
+                   
+                </tr>        
+            </table>      
+        </div>
+
+        <div class="t1"> 
+            <table class="table" border="1" width="">
+                <tr>
+                    <th width="50%">Company Name</th>
+                    <th>Student Name</th>                
+                </tr>
+                <tr>
+                    <td rowspan="4">
+                        <img style="margin-top:20px" class="image" src="/module/image/4.png" alt="">
+                    </td>
+                    <td >kajal Mandal</td>
+                </tr>
+                
+                <tr>
+                    <td>Poetusha Mondal</td>
+                    
+                </tr>
+                <tr>
+                    <td>Bristi Das</td>
+                    
+                </tr>
+                <tr>
+                    <td>Rudra Dey</td>
+                    
+                </tr>
+                       
+            </table>      
+        </div>
+        <div class="t1"> 
+            <table class="table" border="1" width="">
+                <tr>
+                    <th width="50%">Company Name</th>
+                    <th>Student Name</th>                
+                </tr>
+                <tr>
+                    <td rowspan="5">
+                        <img style="margin-top:70px" class="image" src="/module/image/7.png" alt="">
+                    </td>
+                    <td >Queen Khatun</td>
+                </tr>
+                
+                <tr>
+                    <td>Khadija Khatun</td>
+                    
+                </tr>
+                <tr>
+                    <td>Ebrahim sk</td>
+                    
+                </tr>
+                <tr>
+                    <td>Majar Ali</td>
+                    
+                </tr>
+                <tr>
+                    <td>Nobhonil Roy</td>
+                   
+                </tr>        
+            </table>      
+        </div>
+    </div>
+
+    <!--Table 2019-->
+
+    <div class="title-back">
+        <div class="t1"> 
+            <span style="color: rgb(0, 0, 0);background-color: #04ffc9;border-radius: 5px;font-weight: bold; padding: 5px;">
+                2019 job opportunity 
+           </span>
+            <table class="table" border="1" width="">
+                <tr>
+                    <th width="50%">Company Name</th>
+                    <th>Student Name</th>                
+                </tr>
+                <tr>
+                    <td rowspan="5">
+                        <img class="image" src="/module/image/wipro.png" alt="">
+                    </td>
+                    <td >Rudra Biswas</td>
+                </tr>
+                
+                <tr>
+                    <td>Sagar Dey</td>
+                    
+                </tr>
+                <tr>
+                    <td>Krishna Mandal</td>
+                    
+                </tr>
+                <tr>
+                    <td>Amina Khatun</td>
+                    
+                </tr>
+                <tr>
+                    <td>Neha Das</td>
+                   
+                </tr>        
+            </table>      
+        </div>
+
+        <div class="t1"> 
+            <table class="table" border="1" width="">
+                <tr>
+                    <th width="50%">Company Name</th>
+                    <th>Student Name</th>                
+                </tr>
+                <tr>
+                    <td rowspan="5">
+                        <img style="margin-top:70px" class="image" src="/module/image/7.png" alt="">
+                    </td>
+                    <td >Ajit Mandal</td>
+                </tr>
+                
+                <tr>
+                    <td>Shubha Mondal</td>
+                    
+                </tr>
+                <tr>
+                    <td>Priya Das</td>
+                    
+                </tr>
+                <tr>
+                    <td>Guddu Kumar</td>
+                    
+                </tr>
+                <tr>
+                    <td>Kamal Saha</td>
+                    
+                </tr>
+                       
+            </table>      
+        </div>
+        <div class="t1"> 
+            <table class="table" border="1" width="">
+                <tr>
+                    <th width="50%">Company Name</th>
+                    <th>Student Name</th>                
+                </tr>
+                <tr>
+                    <td rowspan="5">
+                        <img style="margin-top:20px" class="image" src="/module/image/infosys.png" alt="">
+                    </td>
+                    <td >Nasrin Khatun</td>
+                </tr>
+                
+                <tr>
+                    <td>Altamash Kobir</td>
+                    
+                </tr>
+                <tr>
+                    <td>Ajim Sk</td>
+                    
+                </tr>
+                <tr>
+                    <td>Samir Mondal</td>
+                    
+                </tr>
+                <tr>
+                    <td>Aditi Manna</td>
+                   
+                </tr>        
+            </table>      
+        </div>
+    </div>
+
+    <br>
+   
+
+
+
+
+    <!-- <div class="main-b">
+        <a href="https://careers.wipro.com/">    
+            <div class="style1"> <br/>
+                <img  class="image" src="/module/image/wipro.png" alt="not available"><br>
+                <span>100% Job opportunity Know more...</span>
+            </div>    
+        </a><br>
+        <a href="https://www.rssoftware.com/careers/">    
+            <div class="style1"> <br/>
+                <img  class="image" src="/module/image/2.png" alt="not available"><br>
+                <span>100% Job opportunity Know more...</span>
+            </div>    
+        </a><br>
+        <a href="https://careers.techmahindra.com/">    
+            <div class="style1"> <br/>
+                <img  class="image" src="/module/image/3.png" alt="not available"><br>
+                <span>100% Job opportunity Know more...</span>
+            </div>    
+        </a><br>
+    </div>
+   
+    <div class="main-b">
+        <a href="https://www.nimbusitsolutions.com/">    
+            <div class="style1"> <br/>
+                <img  class="image" src="/module/image/4.png" alt="not available"><br>
+                <span>100% Job opportunity Know more...</span>
+            </div>    
+        </a><br>
+        <a href="https://in.linkedin.com/company/infoway-it-solutions-pvt--ltd-">    
+            <div class="style1"> <br/>
+                <img  class="image" src="/module/image/5.png" alt="not available"><br>
+                <span>100% Job opportunity Know more...</span>
+            </div>    
+        </a><br>
+        <a href="https://www.comparably.com/companies/kt/jobs">    
+            <div class="style1"> <br/>
+                <img  class="image" src="/module/image/6.png" alt="not available"><br>
+                <span>100% Job opportunity Know more...</span>
+            </div>    
+        </a><br>
+    </div>
+
+    <div class="main-b">
+        <a href="https://www.godrejproperties.com/">    
+            <div class="style1"> <br/>
+                <img  class="image" src="/module/image/7.png" alt="not available"><br>
+                <span>100% Job opportunity Know more...</span>
+            </div>    
+        </a><br>
+        <a href="https://www.kotak.com/en/about-us/careers.html">    
+            <div class="style1"> <br/>
+                <img  class="image" src="/module/image//8.png" alt="not available"><br>
+                <span>100% Job opportunity Know more...</span>
+            </div>    
+        </a><br>
+        <a href="https://canarabank.com/User_page.aspx?cid=129">    
+            <div class="style1"> <br/>
+                <img  class="image" src="/module/image/9.png" alt="not available"><br>
+                <span>100% Job opportunity Know more...</span>
+            </div>    
+        </a><br>
+    </div>
+
+    <div class="main-b">
+        <a href="https://www.honda.com/careers/">    
+            <div class="style1"> <br/>
+                <img  class="image" src="/module/image/10.png" alt="not available"><br>
+                <span>100% Job opportunity Know more...</span>
+            </div>    
+        </a><br>
+        <a href="https://www.hyundai.com/in/en/hyundai-story/career/overview">    
+            <div class="style1"> <br/>
+                <img  class="image" src="/module/image/11.png" alt="not available"><br>
+                <span>100% Job opportunity Know more...</span>
+            </div>    
+        </a><br>
+        <a href="https://www.fortishealthcare.com/careers/">    
+            <div class="style1"> <br/>
+                <img  class="image" src="/module/image/13.png" alt="not available"><br>
+                <span>100% Job opportunity Know more...</span>
+            </div>    
+        </a><br>
+    </div>
+
+    <div class="main-b">
+        <a href="https://www.apollohospitals.com/careers/index.html">    
+            <div class="style1"> <br/>
+                <img  class="image" src="/module/image/14.png" alt="not available"><br>
+                <span>100% Job opportunity Know more...</span>
+            </div>    
+        </a><br>
+        <a href="https://www.columbiaasia.com/careers">    
+            <div class="style1"> <br/>
+                <img  class="image" src="/module/image/15.png" alt="not available"><br>
+                <span>100% Job opportunity Know more...</span>
+            </div>    
+        </a><br>
+        <a href="https://golocall.com/">    
+            <div class="style1"> <br/>
+                <img  class="image" src="/module/image/16.png" alt="not available"><br>
+                <span>100% Job opportunity Know more...</span>
+            </div>    
+        </a><br><br><br><br><br>
+    </div> -->
+
+    
+    
+    
+</body>
+</html>
